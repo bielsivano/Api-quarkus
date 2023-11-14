@@ -42,7 +42,7 @@ public class Contas {
             contaService.depositar(numeroConta, valorDeposito);
             return "Depósito no valor de R$ " + valorDeposito + " na conta de número: " + numeroConta;
         } catch (ContaInvalidaException e) {
-            return "Conta inválida. Impossível realizar o depósito!";
+            return "Conta inválida";
 
         }
 
@@ -78,12 +78,11 @@ public class Contas {
                     "Conta de destino: " + contaDestino +"\n" +
                     "Valor transferido: R$ " + valorTransferencia;
         } catch (ContaInvalidaException e) {
-            return "Conta de origem ou de destino inválida. Favor, verifique os números.";
+            return "Conta de origem ou de destino inválida.";
         } catch (SaldoInsuficienteException e) {
             return "Saldo da conta de origem insuficiente para realizar a transferência.";
 
         }
     }
-
 
 }
