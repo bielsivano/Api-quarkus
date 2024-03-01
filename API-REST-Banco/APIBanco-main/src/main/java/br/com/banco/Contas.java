@@ -20,7 +20,7 @@ public class Contas {
     public String listarContas() {
         return listaContas.toString();
     }
-    @PUT
+    @POST
     @Path("/criarconta")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
